@@ -1,0 +1,57 @@
+﻿<Page x:Class="Ejemplo5.Pages.ProductShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Ejemplo5.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductShow">
+
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource textBlockStyle1}"/>
+            <Style TargetType="Button" BasedOn="{StaticResource buttonStyle1}"/>
+        </StackPanel.Resources>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Ejemplo5;component/imagen/fondo.jpg"/>
+        </StackPanel.Background>
+
+        <TextBlock Text="CONSULTAR ARMAS" Background="Red" Style="{StaticResource textBlockTitleStyle1}"/>
+        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="0,5" Width="150" SelectionChanged="comboProduct_SelectionChanged" />
+
+        <Grid x:Name="ProductoDataGrid" Margin="0,0,0,0" Width="350" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="tipo:"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="modelo:"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="precio:"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="stock:"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha de alta:"/>
+
+
+            <TextBlock Margin="10,5" Text="{Binding Path=tipo}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=marca}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=precio}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=stock}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=fechaAlta}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left"/>
+
+
+        </Grid>
+
+        <StackPanel  x:Name="buttonsPanel" Visibility="Visible" Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="MODIFICAR" Background="Green" Click="Button_Click"/>
+            <Button Content="BORRAR" Background="Red" Click="Button_Click_1"/>
+        </StackPanel>
+    </StackPanel>
+</Page>
