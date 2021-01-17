@@ -8,6 +8,7 @@ namespace Ejemplo5.UsersClass
 {
     public class Producto : ICloneable
     {
+
         public String tipo { set; get; }
         public String marca { set; get; }
         public String precio { set; get; }

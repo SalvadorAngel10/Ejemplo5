@@ -1,4 +1,5 @@
 ﻿using Ejemplo5.UsersClass;
+using Ejemplo5.XML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -112,8 +113,12 @@ namespace Ejemplo5.Pages
                 String marca = txt_modelo.Text;
                 String precio = txt_precio.Text;
                 String stock = txt_stock.Text;
-
                 DateTime fechaAlta = (DateTime)txt_fechaAlta.SelectedDate;
+                /*Class1.LoadXMl();
+                Class1.AddCategoria("coches");
+                 Class1.saveXML();*/
+
+               
                 if (Validation())
                 {
                     MessageBoxResult resultado = MessageBox.Show("Tipo: "+tipo + "\n" +
