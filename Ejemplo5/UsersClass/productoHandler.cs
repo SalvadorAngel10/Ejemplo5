@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ejemplo5.XML;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Ejemplo5.UsersClass
         public productoHandler()
         {
             this.ProductList = new ObservableCollection<Producto>();
+            Actualizarxml();
         }
 
         public void Addproduct(Producto producto)
@@ -28,6 +30,11 @@ namespace Ejemplo5.UsersClass
         public void Removeproduct(int pos)
         {
             ProductList.RemoveAt(pos);
+        }
+
+        public void Actualizarxml() 
+        {
+            this.ProductList = Class1.LoadProductos();
         }
     }
 }

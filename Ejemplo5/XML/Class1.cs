@@ -1,10 +1,12 @@
 ﻿using Ejemplo5.UsersClass;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+
 
 namespace Ejemplo5.XML
 {
@@ -23,7 +25,7 @@ namespace Ejemplo5.XML
 
        
 
-        public static void AddCategoria(Producto p /*String category*/) 
+        private static void AddCategoria(Producto p /*String category*/) 
         {
             var listaCAtegorias = xml.Root.Elements("tipo").Attributes("idTipo");
             bool isNewCategory = true;
@@ -53,7 +55,8 @@ namespace Ejemplo5.XML
             producto = p;
             LoadXMl();
             AddCategoria(p);
-            addModelo(); 
+            addModelo();
+            crearProducto();
             saveXML();
         }
 
@@ -77,6 +80,36 @@ namespace Ejemplo5.XML
             if (isNewModelo) { xmlCategoria.Add(xmlModelo); }  
         }
 
+        private static void crearProducto() 
+        {
+            XElement xmlProducto = new XElement("Producto", new XAttribute("Precio", producto.precio),
+                new XAttribute("Stock",producto.stock),new XAttribute("Fecha",producto.fechaAlta));
+            xmlModelo.Add(xmlProducto);
+        }
+
+        public static ObservableCollection<Producto> LoadProductos() 
+        {
+            ObservableCollection<Producto> productiList = new ObservableCollection<Producto>();
+            LoadXMl();
+            var listaProductos = xml.Root.Elements("tipo").Elements("idTipo").Elements("Producto");
+            foreach (XElement productoxml in listaProductos) 
+            {
+                producto = new Producto();
+                producto.precio = productoxml.Attribute("Precio").Value;
+                producto.stock = productoxml.Attribute("Stock").Value;
+                // producto.fechaAlta = productoxml.Attribute("Fecha").Value;
+                producto.marca = productoxml.Parent.Attribute("nombre").Value;
+                producto.tipo = productoxml.Parent.Attribute("idTipo").Value;
+                productiList.Add(producto);
+
+            }
+            return productiList;
+        }
+
            
+    }
+
+    public class ObservarProducto<T>
+    {
     }
 }

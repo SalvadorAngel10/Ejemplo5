@@ -68,6 +68,7 @@ namespace Ejemplo5
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            ProductoHandler.Actualizarxml();
             myNavigationFrame.NavigationService.Navigate(new ProductShow(ProductoHandler));
         }
 
