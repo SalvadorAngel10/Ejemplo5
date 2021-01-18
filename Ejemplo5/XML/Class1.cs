@@ -13,6 +13,7 @@ namespace Ejemplo5.XML
         private static XDocument xml;
         private static Producto producto;
         private static XElement xmlCategoria;
+        private static XElement xmlModelo;
 
         private static void LoadXMl() { xml = XDocument.Load("../../XML/XMLFile1.xml"); }
         private static void saveXML() 
@@ -22,13 +23,13 @@ namespace Ejemplo5.XML
 
        
 
-        private static void AddCategoria(Producto p /*String category*/) 
+        public static void AddCategoria(Producto p /*String category*/) 
         {
             var listaCAtegorias = xml.Root.Elements("tipo").Attributes("idTipo");
             bool isNewCategory = true;
             foreach (XAttribute categoria in listaCAtegorias)
             {
-                if (categoria.Value.Equals(p.stock))
+                if (categoria.Value.Equals(p.tipo))
                 {
                     xmlCategoria = categoria.Parent;
                     isNewCategory = false;
@@ -36,21 +37,46 @@ namespace Ejemplo5.XML
                 }
                 else
                 {
-                    xmlCategoria = new XElement("tipo", new XAttribute("idTipo",p.stock /*category*/));
-                   
+                    xmlCategoria = new XElement("tipo", new XAttribute("idTipo",p.tipo /*category*/));
+                    xmlModelo = new XElement("modelo", new XAttribute("nombre", producto.marca));
                     isNewCategory = true;
                 }
             }
-            if (isNewCategory) { xml.Root.Add(xmlCategoria); }
+            if (isNewCategory) 
+            {
+                xmlCategoria.Add(xmlModelo);
+                xml.Root.Add(xmlCategoria); 
+            }
         }
         public static void addXMLProduct(Producto p)
         {
             producto = p;
             LoadXMl();
-            AddCategoria();
+            AddCategoria(p);
+            addModelo(); 
             saveXML();
         }
 
+        private static void addModelo() 
+        {
+            bool isNewModelo = true;
+            foreach (XAttribute modelo in xmlCategoria.Elements().Attributes("nombre")) 
+            {
+                if (modelo.Value.Equals(producto.marca))
+                {
+                    xmlModelo = modelo.Parent;
+                    isNewModelo = false;
+                    break;
+                }
+                else 
+                {
+                    xmlModelo = new XElement("modelo", new XAttribute("nombre",producto.marca));
+                    isNewModelo = true;
+                }
+            }
+            if (isNewModelo) { xmlCategoria.Add(xmlModelo); }  
+        }
 
+           
     }
 }

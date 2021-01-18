@@ -136,7 +136,7 @@ namespace Ejemplo5.Pages
                         case MessageBoxResult.Yes:
                             MessageBox.Show("se ha refistrado bien");
                             Producto producto = new Producto(tipo, marca, precio, stock, fechaAlta);
-                            productoHandler.Addproduct(producto);
+                            Class1.addXMLProduct(producto);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             //MostrarUsuario mostrarUsuario = new MostrarUsuario(usuario);
                             //mostrarUsuario.Show();
@@ -191,6 +191,8 @@ namespace Ejemplo5.Pages
             {
                 txt_tipo.Visibility = Visibility.Hidden;
                 txt_modelo.Visibility = Visibility.Hidden;
+                ttipo.Visibility = Visibility.Visible;
+                tmodelo.Visibility = Visibility.Visible;
                 cMarca.IsEnabled = true;
             }
             else 
@@ -201,14 +203,22 @@ namespace Ejemplo5.Pages
             }
         }
 
-        private void cTipo_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void cMarca_Checked(object sender, RoutedEventArgs e)
         {
-
+            if (txt_modelo.IsVisible)
+            {
+                
+                txt_modelo.Visibility = Visibility.Hidden;
+             
+                tmodelo.Visibility = Visibility.Visible;
+                cMarca.IsEnabled = true;
+            }
+            else
+            {
+               
+                txt_modelo.Visibility = Visibility.Visible;
+                cMarca.IsEnabled = false;
+            }
         }
     }
 }

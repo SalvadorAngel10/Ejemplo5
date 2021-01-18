@@ -1,18 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Produsctos>
-	<tipo idTipo="Arma">
-		<modelo nombre="pistola"/>
-		<modelo nombre="metralleta"/>
-		<modelo nombre="francotirador"/>
-	</tipo>
-	<tipo idTipo="Protecciones">
-		<modelo nombre="chaleco"/>
-		<modelo nombre="casco"/>
-		<modelo nombre="tanque"/>
-	</tipo>
-	<tipo idTipo="Accesorios">
-		<modelo nombre="granada"/>
-		<modelo nombre="municion"/>
-		<modelo nombre="cargadores"/>
-	</tipo>
+  <tipo idTipo="Arma">
+    <modelo nombre="pistola" />
+    <modelo nombre="metralleta" />
+    <modelo nombre="francotirador" />
+  </tipo>
+  <tipo idTipo="Protecciones">
+    <modelo nombre="chaleco" />
+    <modelo nombre="casco" />
+    <modelo nombre="tanque" />
+  </tipo>
+  <tipo idTipo="Accesorios">
+    <modelo nombre="granada" />
+    <modelo nombre="municion" />
+    <modelo nombre="cargadores" />
+  </tipo>
+  <tipo idTipo="coche">
+    <modelo nombre="seat" />
+  </tipo>
 </Produsctos>

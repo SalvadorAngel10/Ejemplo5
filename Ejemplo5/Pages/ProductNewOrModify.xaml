@@ -38,14 +38,14 @@
             <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha de alta:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
             <ComboBox x:Name="txt_tipo" Text="{Binding Path=tipo}" Margin="9.8,5,10.4,0" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Height="22" VerticalAlignment="Top" SelectionChanged="txt_tipo_SelectionChanged"/>
-            <TextBox x:Name="tprecio" Text="{Binding Path=tipo}" Margin="10,5" Grid.Row="0" Grid.Column="1" Visibility="Hidden" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="ttipo" Text="{Binding Path=tipo}" Margin="10,5" Grid.Row="0" Grid.Column="1" Visibility="Hidden" VerticalContentAlignment="Center"/>
 
             <ComboBox x:Name="txt_modelo" Text="{Binding Path=marca}" Margin="10,5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"/>
-            <TextBox x:Name="tmodelo" Text="{Binding Path=precio}" Margin="10,5" Grid.Row="1" Visibility="Hidden" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tmodelo" Text="{Binding Path=marca}" Margin="10,5" Grid.Row="1" Visibility="Hidden" Grid.Column="1" VerticalContentAlignment="Center"/>
             <TextBox x:Name="txt_precio" Text="{Binding Path=precio}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
             <TextBox x:Name="txt_stock" Text="{Binding Path=stock}" Margin="10,5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>
             <DatePicker x:Name="txt_fechaAlta" SelectedDate="{Binding Path=fechaAlta}" Margin="10,5" Grid.Row="52" Grid.Column="1"/>
-            <CheckBox x:Name="cTipo" Grid.Row="0" Grid.Column="3" Margin="5,10,0,0" Click="cTipo_Click" Checked="cTipo_Checked"/>
+            <CheckBox x:Name="cTipo" Grid.Row="0" Grid.Column="3" Margin="5,10,0,0" Click="cTipo_Click"/>
             <CheckBox x:Name="cMarca"  Grid.Row="1" Grid.Column="3" Margin="5,10,0,0" Click="cMarca_Click" Checked="cMarca_Checked"/>
 
         </Grid>
