@@ -1,4 +1,5 @@
 ﻿using Ejemplo5.UsersClass;
+using Ejemplo5.XML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,12 +45,14 @@ namespace Ejemplo5.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Class1.editarProducto(producto);
             MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler, (Producto)producto.Clone(), pos));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ProductoHandler.Removeproduct(pos);
+            // ProductoHandler.Removeproduct(pos);
+            Class1.RemoveProducto(producto.precio);
             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
         }
     }

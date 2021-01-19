@@ -1,4 +1,5 @@
 ﻿using Ejemplo5.UsersClass;
+using Ejemplo5.XML;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -122,13 +123,13 @@ namespace Ejemplo5.Pages
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
-            //MainWindow.myNavigationFrame.NavigationSelection.Navigate(new Pagina modificar);
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
-            //XMLHandler.RemoveProduct(product.productRef);
+            Class1.RemoveProducto(product.precio);
             UpdateProductList();
         }
     }

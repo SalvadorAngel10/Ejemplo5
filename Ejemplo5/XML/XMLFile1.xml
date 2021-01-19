@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Produsctos>
   <tipo idTipo="Arma">
-    <modelo nombre="pistola">
-      <Producto Precio="32" Stock="1" Fecha="2021-01-18T12:50:26.2373889+01:00" />
-      <Producto Precio="111" Stock="2222" Fecha="2021-01-18T17:19:27.1378867+01:00" />
-    </modelo>
+    <modelo nombre="pistola" />
     <modelo nombre="metralleta" />
     <modelo nombre="francotirador" />
   </tipo>
   <tipo idTipo="Protecciones">
-    <modelo nombre="chaleco" />
+    <modelo nombre="chaleco">
+      <Producto Precio="11111111" Stock="1" Fecha="2021-01-19T12:10:10.8122553+01:00" />
+    </modelo>
     <modelo nombre="casco" />
     <modelo nombre="tanque" />
   </tipo>
@@ -22,8 +21,6 @@
     <modelo nombre="seat" />
   </tipo>
   <tipo idTipo="casa">
-    <modelo nombre="trinchera">
-      <Producto Precio="20000" Stock="1" Fecha="2021-01-18T21:38:02.4132985+01:00" />
-    </modelo>
+    <modelo nombre="trinchera" />
   </tipo>
 </Produsctos>

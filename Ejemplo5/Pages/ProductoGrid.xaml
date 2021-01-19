@@ -39,7 +39,7 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Background="Red" Click="Button_Click_2"/>
+                            <Button Content="Borrar" Background="Red" Click="Button_Click_2"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

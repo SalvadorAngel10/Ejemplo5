@@ -107,10 +107,41 @@ namespace Ejemplo5.XML
             return productiList;
         }
 
-           
+        public static void RemoveProducto(String Precio) 
+        {
+            LoadXMl();
+            var listaProductos = xml.Root.Elements("tipo").Elements("modelo").Elements("Producto").Attributes("Precio");
+
+            foreach (XAttribute precio in listaProductos) 
+            {
+                if (Precio == precio.Value) 
+                {
+                    precio.Parent.Remove();
+                    break;
+                }
+            }
+            saveXML();
+        }
+
+        public static void editarProducto(Producto p)
+        {
+            LoadXMl();
+            var listaProductos = xml.Root.Elements("tipo").Elements("modelo").Elements("Producto").Attributes("Precio");
+
+            foreach (XAttribute precio in listaProductos)
+            {
+                if (p.precio == precio.Value)
+                {
+                    precio.Parent.Remove();
+                    break;
+                }
+            }
+            saveXML();
+            addXMLProduct(p);
+        }
+
+
     }
 
-    public class ObservarProducto<T>
-    {
-    }
+   
 }
