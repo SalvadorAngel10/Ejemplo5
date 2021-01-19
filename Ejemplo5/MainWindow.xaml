@@ -30,6 +30,7 @@
             <StackPanel x:Name="arma" Orientation="Horizontal" Visibility="Hidden">
             <Button Content="NUEVA ARMA"  Click="Button_Click_5"/>
             <Button Content="BUSCAR ARMA" Click="Button_Click_6" />
+            <Button Content="REGISTRO" Click="Button_Click_11"/>
             </StackPanel>
         </StackPanel>
         

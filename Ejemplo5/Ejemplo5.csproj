@@ -59,6 +59,9 @@
     <Compile Include="Pages\ProductNewOrModify.xaml.cs">
       <DependentUpon>ProductNewOrModify.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProductoGrid.xaml.cs">
+      <DependentUpon>ProductoGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProductShow.xaml.cs">
       <DependentUpon>ProductShow.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProductNewOrModify.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductoGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

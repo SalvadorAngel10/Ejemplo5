@@ -42,5 +42,10 @@ namespace Ejemplo5.UsersClass
         {
             return this.MemberwiseClone();
         }
+
+        public String GetAllValues()
+        {
+            return tipo + " " +marca + " " + precio + " " + stock+ " " +fechaAlta;
+        }
     }
 }

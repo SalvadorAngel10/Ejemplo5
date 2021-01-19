@@ -3,6 +3,7 @@
   <tipo idTipo="Arma">
     <modelo nombre="pistola">
       <Producto Precio="32" Stock="1" Fecha="2021-01-18T12:50:26.2373889+01:00" />
+      <Producto Precio="111" Stock="2222" Fecha="2021-01-18T17:19:27.1378867+01:00" />
     </modelo>
     <modelo nombre="metralleta" />
     <modelo nombre="francotirador" />
@@ -19,5 +20,10 @@
   </tipo>
   <tipo idTipo="coche">
     <modelo nombre="seat" />
+  </tipo>
+  <tipo idTipo="casa">
+    <modelo nombre="trinchera">
+      <Producto Precio="20000" Stock="1" Fecha="2021-01-18T21:38:02.4132985+01:00" />
+    </modelo>
   </tipo>
 </Produsctos>

@@ -91,15 +91,16 @@ namespace Ejemplo5.XML
         {
             ObservableCollection<Producto> productiList = new ObservableCollection<Producto>();
             LoadXMl();
-            var listaProductos = xml.Root.Elements("tipo").Elements("idTipo").Elements("Producto");
+            var listaProductos = xml.Root.Elements("tipo").Elements("modelo").Elements("Producto");
             foreach (XElement productoxml in listaProductos) 
             {
                 producto = new Producto();
                 producto.precio = productoxml.Attribute("Precio").Value;
                 producto.stock = productoxml.Attribute("Stock").Value;
+                DateTime.Parse(productoxml.Attribute("Fecha").Value);
                 // producto.fechaAlta = productoxml.Attribute("Fecha").Value;
                 producto.marca = productoxml.Parent.Attribute("nombre").Value;
-                producto.tipo = productoxml.Parent.Attribute("idTipo").Value;
+                producto.tipo = productoxml.Parent.Parent.Attribute("idTipo").Value;
                 productiList.Add(producto);
 
             }

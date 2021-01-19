@@ -102,5 +102,10 @@ namespace Ejemplo5
             Window1 window1 = new Window1();
             window1.Show();
         }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            myNavigationFrame.NavigationService.Navigate(new ProductoGrid(ProductoHandler));
+        }
     }
 }
