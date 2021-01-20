@@ -65,6 +65,7 @@ namespace Ejemplo5.Pages
             myDataGrid.ItemsSource = ProductoHandler.ProductList ;
             myDataGrid.DataContext = ProductoHandler.ProductList;
             myDataGrid.Items.Refresh();
+            ProductoHandler.Actualizarxml();
         }
 
         private void categoryCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -6,14 +6,14 @@
     <modelo nombre="francotirador" />
   </tipo>
   <tipo idTipo="Protecciones">
-    <modelo nombre="chaleco">
-      <Producto Precio="11111111" Stock="1" Fecha="2021-01-19T12:10:10.8122553+01:00" />
-    </modelo>
+    <modelo nombre="chaleco" />
     <modelo nombre="casco" />
     <modelo nombre="tanque" />
   </tipo>
   <tipo idTipo="Accesorios">
-    <modelo nombre="granada" />
+    <modelo nombre="granada">
+      <Producto Precio="3333" Stock="1" Fecha="2021-01-20T20:56:24.2505398+01:00" />
+    </modelo>
     <modelo nombre="municion" />
     <modelo nombre="cargadores" />
   </tipo>
