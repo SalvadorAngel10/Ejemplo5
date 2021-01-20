@@ -124,7 +124,7 @@ namespace Ejemplo5.Pages
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
-            MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler));
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler,product));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
