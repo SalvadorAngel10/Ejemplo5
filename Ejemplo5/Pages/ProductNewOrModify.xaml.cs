@@ -73,14 +73,13 @@ namespace Ejemplo5.Pages
         }
 
         //constructor de modificar
-        public ProductNewOrModify(string title, productoHandler productoHandler, Producto producto, int pos)
+        public ProductNewOrModify(string title, productoHandler productoHandler, Producto producto)
         {
             InitializeComponent();
             Combo();
             productoNM.Text = title;
             this.productoHandler = productoHandler;
             this.producto = producto;
-            this.pos = pos;
             this.productGrid.DataContext = producto;
             this.verify = true;
 

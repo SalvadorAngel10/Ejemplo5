@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Produsctos>
   <tipo idTipo="Arma">
-    <modelo nombre="pistola" />
+    <modelo nombre="pistola">
+      <Producto Precio="112" Stock="2" Fecha="2021-01-21T20:33:50.8947437+01:00" />
+    </modelo>
     <modelo nombre="metralleta" />
     <modelo nombre="francotirador" />
   </tipo>
@@ -11,9 +13,7 @@
     <modelo nombre="tanque" />
   </tipo>
   <tipo idTipo="Accesorios">
-    <modelo nombre="granada">
-      <Producto Precio="3333" Stock="1" Fecha="2021-01-20T20:56:24.2505398+01:00" />
-    </modelo>
+    <modelo nombre="granada" />
     <modelo nombre="municion" />
     <modelo nombre="cargadores" />
   </tipo>

@@ -46,7 +46,7 @@ namespace Ejemplo5.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Class1.editarProducto(producto);
-            MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler, (Producto)producto.Clone(), pos));
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new ProductNewOrModify("Modificar usuario", ProductoHandler, (Producto)producto.Clone()));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
